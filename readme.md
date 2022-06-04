@@ -43,7 +43,7 @@ Seja uma matriz $\mathbf{L} \in \mathbb{R}^{n \times n}$ com entradas $l_{i j}$.
 
 $$
 \begin{equation}
-    \textbf{L} \textrm{     }: l_{i j} = 0 \,\,\,\, \forall j > i 
+    \textbf{L} \textrm{     }: l_{i j} = 0 \textrm{    } \forall j > i 
 \end{equation}
 $$
 
@@ -55,7 +55,7 @@ Seja uma matriz $\mathbf{L} \in \mathbb{R}^{n \times n}$ com entradas $l_{i j}$.
 
 $$
 \begin{equation}
-    \textbf{L} \textrm{     }: l_{i j} = 0 \,\,\,\, \forall i > j 
+    \textbf{L} \textrm{     }: l_{i j} = 0 \textrm{    } \forall i > j 
 \end{equation}
 $$
 
