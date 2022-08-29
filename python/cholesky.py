@@ -3,27 +3,13 @@ Descrição: código que executa a Decomposição de Cholesky versão Gaxpy.
 """
 
 
-def produtoescalar(u, v):
+import sys
+sys.path.append( '/Users/Tarso/Desktop/Projeto GitHub/NumMath/Basics/python' )
 
-    """
-    Descrição: Opera produto escalar entre u e v. Por meio de zip, acessa as entradas de ambos os vetores
-                e adiciona o produto entre ambas entradas na variável pe;
-
-    Entrada(s):
-                i) u (list): vetor operador;
-                ii) v (list): vetor operado;
-
-    Saída(s):
-                i) pe (float): produto escalar entre u e v.
-    """
-
-    pe = 0
-    for i, j in zip(u, v):
-        pe += i*j
-    return pe
+import linalg as la
 
 
-def cholesky1(A, produtoEscalar):
+def cholesky(A):
 
     """
     Descrição: calcula o triângulo de Cholesky e reescreve na matriz A. O algoritmo segue conforme o discutido
@@ -46,7 +32,7 @@ def cholesky1(A, produtoEscalar):
     for j in range(len(A)):
         if j > 0:
             for p in range(j, len(A)):
-                A[p][j] -= produtoEscalar(A[p][:j], A[j][:j])
+                A[p][j] -= la.dotProduct(A[p][:j], A[j][:j])
                 diag = A[j][j]
         for q in range(j, len(A)):
             if diag > 0:
